@@ -2,10 +2,10 @@ import React from 'react';
 import BlogDetails from '../BlogDetailsContainer/BlogDetails';
 import RelatedBlogs from './RelatedBlogs';
 
-const BlogDetailsPage = () => {
+const BlogDetailsPage = ({blog}) => {
     return (
         <section className="post-page-container">
-            <BlogDetails></BlogDetails>
+            <BlogDetails blog={blog} ></BlogDetails>
             <RelatedBlogs></RelatedBlogs>
         </section>
     );

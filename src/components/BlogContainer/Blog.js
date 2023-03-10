@@ -2,12 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const Blog = ({blog}) => {
-  console.log(blog);
-  const {title, description, image, tags, likes, isSaved,createdAt } = blog;
-  console.log(tags)
+  const {id, title,image, tags, likes, isSaved,createdAt } = blog;
     return (
         <div className="lws-card">
-            <Link to="/blogs/1">
+            <Link to={`blogs/${id}`}>
               <img src={image} className="lws-card-image" alt="" />
             </Link>
             <div className="p-4">
@@ -17,7 +15,7 @@ const Blog = ({blog}) => {
                   <i className="fa-regular fa-thumbs-up"></i>{likes}
                 </p>
               </div>
-            <Link to="/blogs/1" className="lws-postTitle">
+            <Link to={`blogs/${id}`} className="lws-postTitle">
                 {title}
               </Link>
               <div className="lws-tags">
