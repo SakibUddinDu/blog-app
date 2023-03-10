@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Sidebar = () => {
+  
     return (
         <aside>
           <div className="sidebar-items">
@@ -18,13 +19,14 @@ const Sidebar = () => {
             </div>
             <div className="sidebar-content">
               <h4>Filter</h4>
+              
               <div className="radio-group">
                 <div>
                   <input
                     type="radio"
                     name="filter"
                     id="lws-all"
-                    // checked
+                    checked
                     className="radio"
                   />
                   <label htmlFor="lws-all">All</label>

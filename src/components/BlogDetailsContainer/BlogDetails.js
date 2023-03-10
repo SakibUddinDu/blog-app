@@ -8,7 +8,7 @@ const BlogDetails = ({blog}) => {
   console.log("hello")
     return (
         <main className="post">
-        <img src={image} alt="githum" className="w-full rounded-md" id="lws-megaThumb" />
+        <img src={image} alt="github" className="w-full rounded-md" id="lws-megaThumb" />
         <div>
           <h1 className="mt-6 text-2xl post-title" id="lws-singleTitle">
             {title}
