@@ -7,10 +7,12 @@ import Loading from './../../utils/Loading';
 const Blogs = () => {
     const dispatch = useDispatch();
     const {blogs, isLoading, isError, errorMsg} = useSelector((state)=> state.blogs)
+    const {selected, checked} = useSelector((state)=> state.filter)
+    console.log(selected, checked)
 
     useEffect(() => {
-      dispatch(fetchBlogsAsync())
-    }, [dispatch])
+      dispatch(fetchBlogsAsync({selected, checked}))
+    }, [dispatch,selected, checked])
 
     // decide what to render
     let content;
