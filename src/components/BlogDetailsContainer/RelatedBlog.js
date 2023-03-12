@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RelatedBlog = ({relatedBlog}) => {
-  const {image, title, tags, createdAt} = relatedBlog;
+  const {id, image, title, tags, createdAt} = relatedBlog;
     return (
         <div className="card">
-        <a href="post.html">
+        <Link to={`blogs/${id}`}>
           <img src={image} className="card-image" alt="" />
-        </a>
+        </Link>
         <div className="p-4">
-          <a href="post.html" className="text-lg post-title lws-RelatedPostTitle">
+          <Link to={`blogs/${id}`} className="text-lg post-title lws-RelatedPostTitle">
             {title}
-          </a>
+          </Link>
           <div className="mb-0 tags">
             {
               tags.map((tag, index) =><span key={index}>#{tag},</span>)
