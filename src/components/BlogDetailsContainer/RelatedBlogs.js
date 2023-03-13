@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import RelatedBlog from './RelatedBlog';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRelatedBlogsAsync } from '../../features/relatedBlogs/relatedBlogsSlice';
 import Loading from '../../utils/Loading';
+import RelatedBlog from './RelatedBlog';
 
 const RelatedBlogs = ({id, tags}) => {
   const {relatedBlogs, isLoading, isError, errorMsg} = useSelector((state)=> state.relatedBlogs)  
@@ -22,7 +22,7 @@ const RelatedBlogs = ({id, tags}) => {
      if(!isLoading && !isError && relatedBlogs?.length === 0 ) content = <div className="col-span-12">No videos found!</div>;
 
      if(!isLoading && !isError && relatedBlogs?.length > 0){
-         content = relatedBlogs.map((relatedBlog) => <RelatedBlog relatedBlog={relatedBlog}></RelatedBlog>)
+         content = relatedBlogs.map((relatedBlog) => <RelatedBlog key={relatedBlog.id} relatedBlog={relatedBlog}></RelatedBlog>)
      }
     return (
     <aside>
