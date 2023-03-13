@@ -9,7 +9,6 @@ const initialState = {
 
 // async thunk
 export const fetchBlogsAsync = createAsyncThunk('blogs/fetchBlogsAsync', async ({ selected, checked })=>{
-    console.log(selected, checked);
    const blogs = await getBlogs(selected, checked );
    return blogs;
 })

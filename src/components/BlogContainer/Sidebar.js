@@ -67,7 +67,6 @@ const Sidebar = () => {
                 name="filter"
                 value="saved"
                 id="lws-saved"
-                //saved holei check hobe, true false return korle just checkedfilter dilei hoto
                 checked={checkedFilter === 'saved'}
                 className="radio"
                 onChange={handleChange}

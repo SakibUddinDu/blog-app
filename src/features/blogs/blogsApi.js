@@ -1,6 +1,5 @@
 import axios from './../../utils/axios';
 export const getBlogs = async ( selected, checked ) => {
-    console.log(selected, checked);
     let queryString ='';
     if(checked === "all"){
         queryString+=`isSaved=false`;
@@ -17,10 +16,7 @@ export const getBlogs = async ( selected, checked ) => {
         queryString += queryString ? `&_sort=likes&_order=desc`: "&_sort=likes&_order=desc";
         console.log(queryString);
     }
-    console.log(queryString);
-
     const url = queryString ? `/blogs/?${queryString}`: '/blogs'
-    console.log(url)
     const response = await axios.get(url);
 
     return response.data;

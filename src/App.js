@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<BlogsPage></BlogsPage>}></Route>
           <Route path='/blogs/:blogId' element={<BlogDetailsContainer></BlogDetailsContainer>}></Route>
+          <Route path='/relatedBlogs/:blogId' element={<BlogDetailsContainer></BlogDetailsContainer>}></Route>
         </Routes>
       </Router>
     </div>

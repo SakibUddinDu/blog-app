@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const Blog = ({blog}) => {
-  const {id, title,image, tags, likes, isSaved,createdAt } = blog;
+  const {id, title, image, tags, likes, isSaved, createdAt } = blog;
     return (
         <div className="lws-card">
             <Link to={`blogs/${id}`}>
@@ -27,7 +27,6 @@ const Blog = ({blog}) => {
                 {
                   isSaved &&  <span className="lws-badge"> Saved </span>
                 }
-               
               </div>
             </div>
           </div>

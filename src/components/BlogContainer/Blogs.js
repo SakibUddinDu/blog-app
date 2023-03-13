@@ -8,7 +8,6 @@ const Blogs = () => {
     const dispatch = useDispatch();
     const {blogs, isLoading, isError, errorMsg} = useSelector((state)=> state.blogs)
     const {selected, checked} = useSelector((state)=> state.filter)
-    console.log(selected, checked)
 
     useEffect(() => {
       dispatch(fetchBlogsAsync({selected, checked}))
