@@ -18,10 +18,3 @@ export const updateBlogLikes = async({blogId, currentLikes}) =>{
     })
     return data;
 }
-// export const updateBlogLikes = async({id, currentLike}) =>{
-//     console.log(id, currentLike)
-//     const {data}  = await axios.patch(`/blogs/${id}`,{
-//         likes:currentLike + 1,
-//     })
-//     return data;
-// }
